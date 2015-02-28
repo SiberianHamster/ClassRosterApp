@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
   @IBOutlet weak var tableView: UITableView!
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   override func viewDidLoad() {
     self.tableView.dataSource = self
+    self.tableView.delegate = self
     super.viewDidLoad()
     let Amethyst = Person(firstName: "Amy", lastName: "Winston")
     let Aquaman = Person(firstName: "Arthur", lastName: "Curry")
@@ -77,7 +78,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     return cell
   }
   
-  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "DetailedView" {
+      var segueNorm = segue.destinationViewController as PersonDetailViewController
+      var selectedRow = self.tableView.indexPathForSelectedRow()
+      var person = self.names[selectedRow!.row]
+      segueNorm.selectedUser = person
+    }
+  }
 
 }
 

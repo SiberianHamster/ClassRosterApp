@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEC6BA821AA270A50038DCB5 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */; };
 		AECE1A3F1AA2407B00E6FD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE1A3E1AA2407B00E6FD7C /* AppDelegate.swift */; };
 		AECE1A411AA2407B00E6FD7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE1A401AA2407B00E6FD7C /* ViewController.swift */; };
 		AECE1A441AA2407B00E6FD7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECE1A421AA2407B00E6FD7C /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		AECE1A391AA2407B00E6FD7C /* RosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECE1A3D1AA2407B00E6FD7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AECE1A3E1AA2407B00E6FD7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				AECE1A401AA2407B00E6FD7C /* ViewController.swift */,
+				AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC6BA821AA270A50038DCB5 /* PersonDetailViewController.swift in Sources */,
 				AECE1A621AA2415D00E6FD7C /* Person.swift in Sources */,
 				AECE1A411AA2407B00E6FD7C /* ViewController.swift in Sources */,
 				AECE1A3F1AA2407B00E6FD7C /* AppDelegate.swift in Sources */,
@@ -433,6 +437,7 @@
 				AECE1A5A1AA2407B00E6FD7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AECE1A5B1AA2407B00E6FD7C /* Build configuration list for PBXNativeTarget "RosterAppTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +446,7 @@
 				AECE1A5D1AA2407B00E6FD7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

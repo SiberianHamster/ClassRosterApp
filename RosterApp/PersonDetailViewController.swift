@@ -8,17 +8,26 @@
 
 import UIKit
 
-class PersonDetailViewController: UIViewController {
+class PersonDetailViewController: UIViewController, UITextFieldDelegate {
+  
+  @IBOutlet weak var FirstNameLabel: UITextField!
+  
+  @IBOutlet weak var LastNameLabel: UITextField!
   
   var selectedUser = Person(firstName: "FakeTemp", lastName: "FakeTemp")
   
-  @IBOutlet weak var FirstNameLabel: UILabel!
-  @IBOutlet weak var LastNameLabel: UILabel!
-
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = self.selectedUser.firstName
     FirstNameLabel.text = self.selectedUser.firstName
     LastNameLabel.text = self.selectedUser.lastName
+    FirstNameLabel.delegate = self
+    LastNameLabel.delegate = self
   }
+  
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  
 }

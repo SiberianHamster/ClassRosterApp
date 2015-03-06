@@ -77,24 +77,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-JU-2WF">
-                                <rect key="frame" x="26" y="150" width="211" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Up-ET-zQH">
-                                <rect key="frame" x="26" y="183" width="211" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ct-gO-9ot">
+                                <rect key="frame" x="255" y="110" width="90.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-74-1yk">
+                                <rect key="frame" x="254.5" y="72" width="91.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1Ct-gO-9ot" secondAttribute="centerX" id="5ea-Ls-B0g"/>
+                            <constraint firstItem="3nl-74-1yk" firstAttribute="top" secondItem="hqu-DS-dNx" secondAttribute="bottom" constant="8" id="8fh-2f-GiL"/>
+                            <constraint firstAttribute="centerX" secondItem="3nl-74-1yk" secondAttribute="centerX" id="Fbv-i2-vH2"/>
+                            <constraint firstItem="1Ct-gO-9ot" firstAttribute="top" secondItem="3nl-74-1yk" secondAttribute="bottom" constant="8" id="uaC-x2-Cmw"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="FirstNameLabel" destination="pqc-JU-2WF" id="kxD-D8-CAu"/>
-                        <outlet property="LastNameLabel" destination="9Up-ET-zQH" id="407-Q4-hQs"/>
+                        <outlet property="FirstNameLabel" destination="3nl-74-1yk" id="Sm1-W7-00S"/>
+                        <outlet property="LastNameLabel" destination="1Ct-gO-9ot" id="FFH-nN-H4G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ffc-fC-Mxw" userLabel="First Responder" sceneMemberID="firstResponder"/>

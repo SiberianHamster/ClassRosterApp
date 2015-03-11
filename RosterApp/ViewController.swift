@@ -71,6 +71,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     self.names.append(Zatanna)
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.tableView.reloadData()    
+  }
+  
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
     let person = self.names[indexPath.row]

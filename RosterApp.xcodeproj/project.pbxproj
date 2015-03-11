@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE8DF3B31AACBF6D004209C9 /* NoImages.png in Resources */ = {isa = PBXBuildFile; fileRef = AE8DF3B21AACBF6D004209C9 /* NoImages.png */; };
 		AEC6BA821AA270A50038DCB5 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */; };
 		AECE1A3F1AA2407B00E6FD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE1A3E1AA2407B00E6FD7C /* AppDelegate.swift */; };
 		AECE1A411AA2407B00E6FD7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE1A401AA2407B00E6FD7C /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE8DF3B21AACBF6D004209C9 /* NoImages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoImages.png; sourceTree = "<group>"; };
 		AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		AECE1A391AA2407B00E6FD7C /* RosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECE1A3D1AA2407B00E6FD7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				AECE1A3E1AA2407B00E6FD7C /* AppDelegate.swift */,
+				AE8DF3B21AACBF6D004209C9 /* NoImages.png */,
 				AECE1A451AA2407B00E6FD7C /* Images.xcassets */,
 				AECE1A471AA2407B00E6FD7C /* LaunchScreen.xib */,
 				AECE1A601AA2409400E6FD7C /* Control */,
@@ -225,6 +228,7 @@
 				AECE1A441AA2407B00E6FD7C /* Main.storyboard in Resources */,
 				AECE1A491AA2407B00E6FD7C /* LaunchScreen.xib in Resources */,
 				AECE1A461AA2407B00E6FD7C /* Images.xcassets in Resources */,
+				AE8DF3B31AACBF6D004209C9 /* NoImages.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

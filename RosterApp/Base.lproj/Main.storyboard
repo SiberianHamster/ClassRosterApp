@@ -77,27 +77,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-74-1yk">
+                                <rect key="frame" x="254" y="72" width="91.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VVG-ZL-2Ga">
+                                <rect key="frame" x="200" y="148" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.64705882349999999" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="bQ2-f1-hze"/>
+                                    <constraint firstAttribute="width" constant="200" id="cPy-iM-kMu"/>
+                                </constraints>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ct-gO-9ot">
                                 <rect key="frame" x="255" y="110" width="90.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-74-1yk">
-                                <rect key="frame" x="254.5" y="72" width="91.5" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DK-5g-Qqi">
+                                <rect key="frame" x="237" y="356" width="125" height="30"/>
+                                <state key="normal" title="Add/Modify Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PhotoButton:" destination="0CS-y5-ip8" eventType="touchUpInside" id="pNS-U0-F8h"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2H-ru-DxL">
+                                <rect key="frame" x="180" y="464" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="35l-VB-ZJq"/>
+                                    <constraint firstAttribute="width" constant="240" id="NOf-af-WWE"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="1Ct-gO-9ot" secondAttribute="centerX" id="5ea-Ls-B0g"/>
                             <constraint firstItem="3nl-74-1yk" firstAttribute="top" secondItem="hqu-DS-dNx" secondAttribute="bottom" constant="8" id="8fh-2f-GiL"/>
+                            <constraint firstItem="1Ct-gO-9ot" firstAttribute="top" secondItem="3nl-74-1yk" secondAttribute="bottom" constant="8" id="Bxy-Jp-59v"/>
+                            <constraint firstItem="bD5-oq-XFm" firstAttribute="top" secondItem="e2H-ru-DxL" secondAttribute="bottom" constant="8" id="EMs-yB-tDm"/>
                             <constraint firstAttribute="centerX" secondItem="3nl-74-1yk" secondAttribute="centerX" id="Fbv-i2-vH2"/>
-                            <constraint firstItem="1Ct-gO-9ot" firstAttribute="top" secondItem="3nl-74-1yk" secondAttribute="bottom" constant="8" id="uaC-x2-Cmw"/>
+                            <constraint firstAttribute="centerX" secondItem="e2H-ru-DxL" secondAttribute="centerX" id="Lx0-ye-xn8"/>
+                            <constraint firstAttribute="centerX" secondItem="VVG-ZL-2Ga" secondAttribute="centerX" id="Y8v-tU-zhQ"/>
+                            <constraint firstAttribute="centerX" secondItem="1Ct-gO-9ot" secondAttribute="centerX" id="Z0w-1j-hzg"/>
+                            <constraint firstAttribute="centerX" secondItem="0DK-5g-Qqi" secondAttribute="centerX" id="dXF-66-Cy2"/>
+                            <constraint firstItem="VVG-ZL-2Ga" firstAttribute="top" secondItem="1Ct-gO-9ot" secondAttribute="bottom" constant="8" id="ymj-dv-Vtw"/>
+                            <constraint firstItem="0DK-5g-Qqi" firstAttribute="top" secondItem="VVG-ZL-2Ga" secondAttribute="bottom" constant="8" id="yqT-gR-JCR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BioField" destination="e2H-ru-DxL" id="oBH-QH-nNj"/>
                         <outlet property="FirstNameLabel" destination="3nl-74-1yk" id="Sm1-W7-00S"/>
+                        <outlet property="ImagePlace" destination="VVG-ZL-2Ga" id="d4G-Gy-5Vj"/>
                         <outlet property="LastNameLabel" destination="1Ct-gO-9ot" id="FFH-nN-H4G"/>
                     </connections>
                 </viewController>

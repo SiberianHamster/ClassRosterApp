@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE413AF31AB10C9400877601 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE413AF21AB10C9400877601 /* PersonTableViewCell.swift */; };
+		AE413AF51AB18FD600877601 /* People.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE413AF41AB18FD600877601 /* People.plist */; };
 		AE8DF3B31AACBF6D004209C9 /* NoImages.png in Resources */ = {isa = PBXBuildFile; fileRef = AE8DF3B21AACBF6D004209C9 /* NoImages.png */; };
 		AEC6BA821AA270A50038DCB5 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */; };
 		AECE1A3F1AA2407B00E6FD7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE1A3E1AA2407B00E6FD7C /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE413AF21AB10C9400877601 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		AE413AF41AB18FD600877601 /* People.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = People.plist; sourceTree = "<group>"; };
 		AE8DF3B21AACBF6D004209C9 /* NoImages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoImages.png; sourceTree = "<group>"; };
 		AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		AECE1A391AA2407B00E6FD7C /* RosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				AECE1A611AA2415D00E6FD7C /* Person.swift */,
+				AE413AF41AB18FD600877601 /* People.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				AECE1A401AA2407B00E6FD7C /* ViewController.swift */,
+				AE413AF21AB10C9400877601 /* PersonTableViewCell.swift */,
 				AEC6BA811AA270A50038DCB5 /* PersonDetailViewController.swift */,
 			);
 			name = Control;
@@ -225,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE413AF51AB18FD600877601 /* People.plist in Resources */,
 				AECE1A441AA2407B00E6FD7C /* Main.storyboard in Resources */,
 				AECE1A491AA2407B00E6FD7C /* LaunchScreen.xib in Resources */,
 				AECE1A461AA2407B00E6FD7C /* Images.xcassets in Resources */,
@@ -249,6 +256,7 @@
 				AEC6BA821AA270A50038DCB5 /* PersonDetailViewController.swift in Sources */,
 				AECE1A621AA2415D00E6FD7C /* Person.swift in Sources */,
 				AECE1A411AA2407B00E6FD7C /* ViewController.swift in Sources */,
+				AE413AF31AB10C9400877601 /* PersonTableViewCell.swift in Sources */,
 				AECE1A3F1AA2407B00E6FD7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +383,7 @@
 				INFOPLIST_FILE = RosterApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -385,6 +394,7 @@
 				INFOPLIST_FILE = RosterApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

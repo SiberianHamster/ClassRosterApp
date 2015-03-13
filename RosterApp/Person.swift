@@ -12,6 +12,7 @@ class Person {
   var firstName = "John"
   var lastName = "Doe"
   var pictureOfPerson = UIImage (named: "NoImages.png")
+  var bioOFPerson = "This is some filler text"
   
   init (firstName: String, lastName: String){
     self.firstName = firstName

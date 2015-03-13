@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonDetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PersonDetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
   
   @IBOutlet weak var FirstNameLabel: UITextField!
   
@@ -44,11 +44,31 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate, UIImage
     LastNameLabel.text = self.selectedUser.lastName
     FirstNameLabel.delegate = self
     LastNameLabel.delegate = self
+    BioField.delegate = self
     ImagePlace.image = selectedUser.pictureOfPerson
+    BioField.text = self.selectedUser.bioOFPerson
   }
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     textField.resignFirstResponder()
+    return true
+  }
+  
+  func textViewDidBeginEditing(textView: UITextView) {
+    UIView.animateWithDuration(0.3, animations: { () -> Void in
+      self.view.bounds = CGRect(x: 0, y: 300, width: self.view.bounds.width, height: self.view.bounds.height)
+    })
+  }
+  
+  func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+    if text == "\n"{
+      textView.resignFirstResponder()
+      UIView.animateWithDuration(0.3, animations: { () -> Void in
+        
+        self.view.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        
+      })
+    }
     return true
   }
   
@@ -58,6 +78,8 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate, UIImage
     selectedUser.lastName = LastNameLabel.text
     let currentimage = ImagePlace.image
     selectedUser.pictureOfPerson = currentimage
+    let currentBio = BioField.text
+    selectedUser.bioOFPerson  = currentBio
   }
   
 }

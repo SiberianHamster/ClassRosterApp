@@ -46,7 +46,7 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate, UIImage
     LastNameLabel.delegate = self
     BioField.delegate = self
     ImagePlace.image = selectedUser.pictureOfPerson
-    BioField.text = self.selectedUser.bioOFPerson
+    BioField.text = self.selectedUser.bioOfPerson
   }
   
   func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -79,7 +79,7 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate, UIImage
     let currentimage = ImagePlace.image
     selectedUser.pictureOfPerson = currentimage
     let currentBio = BioField.text
-    selectedUser.bioOFPerson  = currentBio
+    selectedUser.bioOfPerson  = currentBio
   }
   
 }

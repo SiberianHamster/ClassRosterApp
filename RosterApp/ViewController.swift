@@ -29,8 +29,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let plistArray = NSArray(contentsOfFile: filePath) {
           for personObject in plistArray {
             if let personDictionary = personObject as? NSDictionary {
-              let firstName = personDictionary["firstName"] as String
-              let lastName = personDictionary["lastName"] as String
+              let firstName = personDictionary["firstName"] as! String
+              let lastName = personDictionary["lastName"] as! String
               let person = Person(firstName: firstName, lastName: lastName)
               self.names.append(person)
             }
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PersonTableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PersonTableViewCell
     let person = self.names[indexPath.row]
     cell.FirstNameLabel.text = person.firstName
     cell.LastNameLabel.text = person.lastName
@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "DetailedView" {
-      var segueNorm = segue.destinationViewController as PersonDetailViewController
+      var segueNorm = segue.destinationViewController as! PersonDetailViewController
       var selectedRow = self.tableView.indexPathForSelectedRow()
       var person = self.names[selectedRow!.row]
       segueNorm.selectedUser = person
@@ -88,7 +88,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   func getDocumentsPath() -> String {
     println("Begin getting path")
     let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-    let path = paths.first as String
+    let path = paths.first as! String
     println(path + " End getting path")
     return path
 

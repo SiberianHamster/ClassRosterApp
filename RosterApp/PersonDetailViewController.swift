@@ -29,7 +29,7 @@ class PersonDetailViewController: UIViewController, UITextFieldDelegate, UIImage
   }
   
   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-    let image = info[UIImagePickerControllerOriginalImage] as UIImage
+    let image = info[UIImagePickerControllerOriginalImage] as! UIImage
     self.ImagePlace.image = image
     picker.dismissViewControllerAnimated(true, completion: nil)
   }

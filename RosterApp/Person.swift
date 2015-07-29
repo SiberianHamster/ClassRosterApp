@@ -20,10 +20,10 @@ class Person : NSObject, NSCoding {
   }
   
   required init(coder aDecoder: NSCoder) {
-    self.firstName = aDecoder.decodeObjectForKey("firstName") as String
-    self.lastName = aDecoder.decodeObjectForKey("lastName") as String
+    self.firstName = aDecoder.decodeObjectForKey("firstName") as! String
+    self.lastName = aDecoder.decodeObjectForKey("lastName") as! String
     self.pictureOfPerson = aDecoder.decodeObjectForKey("image") as? UIImage
-    self.bioOfPerson = aDecoder.decodeObjectForKey("bioText") as String
+    self.bioOfPerson = aDecoder.decodeObjectForKey("bioText") as! String
   }
   
   func encodeWithCoder(aCoder: NSCoder) {
